@@ -6,18 +6,6 @@ public class CameraScript : MonoBehaviour {
 
 	private static CameraScript instance;
 
-	public static CameraScript Instance
-	{
-		get 
-		{
-			if (instance == null)
-				instance = GameObject.FindObjectOfType<CameraScript> ();
-			
-			return CameraScript.instance;
-		}
-		
-	}
-	
 	// Use this for initialization
 	void Start () 
 	{
@@ -41,6 +29,6 @@ public class CameraScript : MonoBehaviour {
 				gameObject.transform.rotation = Quaternion.Euler(60f, 0f , 0f);
 			}
 		
-		
+		    
 	}
 }

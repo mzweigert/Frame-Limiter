@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using UnityEditor;
 
 public struct positionsStruct
 {
@@ -185,30 +184,24 @@ public class ScoreScript : MonoBehaviour
 			Application.LoadLevel("GameOver");
 	}
 
-	public static void ClearLog()
-	{
-		var assembly = Assembly.GetAssembly(typeof(UnityEditor.ActiveEditorTracker));
-		var type = assembly.GetType("UnityEditorInternal.LogEntries");
-		var method = type.GetMethod("Clear");
-		method.Invoke(new object(), null);
-	}
+	
 
 	void Update()
 	{
 	
-		if(Input.GetKey(KeyCode.S))
+		/*if(Input.GetKey(KeyCode.S))
 		{
-		/*	ClearLog();
+			ClearLog();
 			int i = 0;
 			while(i < ScoreScript.Instance.positionsList.Count)
 			{
 				
 				print(ScoreScript.Instance.positionsList[i].xStart + " " +ScoreScript.Instance.positionsList[i].xEnd + " " +ScoreScript.Instance.positionsList[i].zStart + " " +ScoreScript.Instance.positionsList[i].zEnd + " ");
 				i++;
-			}*/
+			}
 			CreateNewSpeedUp();			
 			
-		}
+		}*/
 
 		if (multiplier >=2) 
 		{
